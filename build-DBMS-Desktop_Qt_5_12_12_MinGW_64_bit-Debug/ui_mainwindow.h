@@ -60,6 +60,7 @@ public:
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QString::fromUtf8("tableView"));
         tableView->setGeometry(QRect(230, 10, 551, 521));
+        tableView->setContextMenuPolicy(Qt::CustomContextMenu);
         tableView->setSelectionMode(QAbstractItemView::SingleSelection);
         tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
         add = new QPushButton(centralwidget);

@@ -1,11 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "modfydialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->tableView,
+    SIGNAL(customContextMenuRequested(QPoint)),
+    SLOT(CustomMenuReq(QPoint)));
+    fl = 0;
 }
 
 MainWindow::~MainWindow()
@@ -23,9 +28,12 @@ void MainWindow::on_action_triggered()
 
 void MainWindow::on_reload_clicked()
 {
-    qmodel = new QSqlTableModel();
-     qmodel->setQuery("SELECT * FROM product");
-     ui->tableView->setModel(qmodel);
+    fl = 1;
+
+    qmodel = new QSqlQueryModel();
+    qmodel->setQuery("SELECT * FROM product");
+
+    ui->tableView->setModel(qmodel);
 }
 
 
@@ -42,7 +50,7 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
     temp_ID = ui->tableView->model()->data(ui->tableView->
     model()->index(index.row(),0)).toInt(); //в одну строку
         QSqlQuery *query = new QSqlQuery();
-        query->prepare("SELECT name, category FROM product WHERE ID = :ID");
+        query->prepare("SELECT name, cat_ID FROM product WHERE ID = :ID");
         query->bindValue(":ID",temp_ID);
 
         ui->lineEdit->setText(QString::number(temp_ID));
@@ -83,5 +91,48 @@ void MainWindow::on_change_clicked()
        ui->lineEdit_2->setText("");
        ui->lineEdit_3->setText("");
        MainWindow::on_reload_clicked();
+}
+
+void MainWindow::CustomMenuReq(QPoint pos)
+{
+    if (fl == 1)
+    {
+        QModelIndex index = ui->tableView->indexAt(pos);
+        GlobID = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),0)).toInt();
+    //Создаём меню и два действия
+        QMenu *menu = new QMenu(this);
+        QAction *ModRec = new QAction("Изменить...", this);
+        QAction *DelRec = new QAction("Удалить", this);
+//Соединяем действие с соответствующим сигналом и слотом
+
+//(который нужно создать позже)
+        connect(ModRec, SIGNAL(triggered()), this, SLOT(ModRecAction()));
+        connect(DelRec, SIGNAL(triggered()), this, SLOT(DelRecAction()));
+
+//Добавление действий, созданных ранее
+        menu->addAction(ModRec);
+        menu->addAction(DelRec);
+
+        menu->popup(ui->tableView->viewport()->mapToGlobal(pos));
+    }
+}
+
+void MainWindow::DelRecAction()
+{
+    QSqlQuery *query = new QSqlQuery();
+    query->prepare("DELETE FROM product WHERE ID = :ID");
+    query->bindValue(":ID",GlobID);
+    query->exec();
+    MainWindow::on_delete_2_clicked();
+}
+
+void MainWindow::ModRecAction()
+{
+    mdlg = new ModfyDialog();
+    connect(this,SIGNAL(sendID(int)),mdlg, SLOT(sendingID(int)));
+    emit sendID(GlobID);
+    mdlg->show();
+    disconnect(this,SIGNAL(sendID(int)),mdlg,
+    SLOT(sendingID(int)));
 }
 

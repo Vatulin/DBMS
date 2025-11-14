@@ -6,6 +6,8 @@
 #include "adddialog.h"
 #include "ui_connectiondialog.h"
 #include <QSqlQueryModel>
+#include "modfydialog.h"
+#include "ui_modfydialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,6 +20,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    int GlobID;
+    int fl;
 
 private slots:
     void on_action_triggered();
@@ -32,10 +37,20 @@ private slots:
 
     void on_change_clicked();
 
+    void CustomMenuReq(QPoint);
+
+    void DelRecAction();
+
+    void ModRecAction();
+
+signals:
+    void sendID(int);
+
 private:
     Ui::MainWindow *ui;
     ConnectionDialog *dlg;
     QSqlQueryModel *qmodel;
     AddDialog *adlg;
+    ModfyDialog *mdlg;
 };
 #endif // MAINWINDOW_H

@@ -13,17 +13,20 @@ SOURCES += \
     adddialog.cpp \
     connectiondialog.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    modfydialog.cpp
 
 HEADERS += \
     adddialog.h \
     connectiondialog.h \
-    mainwindow.h
+    mainwindow.h \
+    modfydialog.h
 
 FORMS += \
     adddialog.ui \
     connectiondialog.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    modfydialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

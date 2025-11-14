@@ -13,6 +13,8 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -31,6 +33,14 @@ public:
     QPushButton *reload;
     QTableView *tableView;
     QPushButton *add;
+    QLabel *label;
+    QLineEdit *lineEdit;
+    QLabel *label_2;
+    QLineEdit *lineEdit_2;
+    QLabel *label_3;
+    QLineEdit *lineEdit_3;
+    QPushButton *change;
+    QPushButton *delete_2;
     QMenuBar *menubar;
     QMenu *menu;
     QStatusBar *statusbar;
@@ -46,13 +56,45 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         reload = new QPushButton(centralwidget);
         reload->setObjectName(QString::fromUtf8("reload"));
-        reload->setGeometry(QRect(10, 10, 121, 71));
+        reload->setGeometry(QRect(10, 10, 101, 31));
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(230, 10, 531, 521));
+        tableView->setGeometry(QRect(230, 10, 551, 521));
+        tableView->setSelectionMode(QAbstractItemView::SingleSelection);
+        tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
         add = new QPushButton(centralwidget);
         add->setObjectName(QString::fromUtf8("add"));
-        add->setGeometry(QRect(10, 90, 121, 71));
+        add->setGeometry(QRect(120, 10, 101, 31));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(10, 60, 55, 16));
+        QFont font;
+        font.setPointSize(10);
+        label->setFont(font);
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(10, 80, 201, 22));
+        lineEdit->setReadOnly(true);
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(10, 120, 201, 16));
+        label_2->setFont(font);
+        lineEdit_2 = new QLineEdit(centralwidget);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(10, 140, 201, 22));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(10, 190, 201, 16));
+        label_3->setFont(font);
+        lineEdit_3 = new QLineEdit(centralwidget);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(10, 210, 201, 22));
+        change = new QPushButton(centralwidget);
+        change->setObjectName(QString::fromUtf8("change"));
+        change->setGeometry(QRect(10, 250, 201, 28));
+        delete_2 = new QPushButton(centralwidget);
+        delete_2->setObjectName(QString::fromUtf8("delete_2"));
+        delete_2->setGeometry(QRect(10, 290, 201, 28));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -78,6 +120,11 @@ public:
         action->setText(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217 \320\272 \320\221\320\224...", nullptr));
         reload->setText(QApplication::translate("MainWindow", "\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214", nullptr));
         add->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214...", nullptr));
+        label->setText(QApplication::translate("MainWindow", "ID", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "\320\232\320\260\321\202\320\265\320\263\320\276\321\200\320\270\321\217", nullptr));
+        change->setText(QApplication::translate("MainWindow", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
+        delete_2->setText(QApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 

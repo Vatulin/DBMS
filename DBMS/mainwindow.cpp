@@ -28,3 +28,10 @@ void MainWindow::on_reload_clicked()
      ui->tableView->setModel(qmodel);
 }
 
+
+void MainWindow::on_add_clicked()
+{
+    adlg = new AddDialog();
+    adlg->show();
+}
+

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "connectiondialog.h"
+#include "adddialog.h"
 #include "ui_connectiondialog.h"
 #include <QSqlQueryModel>
 
@@ -23,9 +24,12 @@ private slots:
 
     void on_reload_clicked();
 
+    void on_add_clicked();
+
 private:
     Ui::MainWindow *ui;
     ConnectionDialog *dlg;
     QSqlQueryModel *qmodel;
+    AddDialog *adlg;
 };
 #endif // MAINWINDOW_H

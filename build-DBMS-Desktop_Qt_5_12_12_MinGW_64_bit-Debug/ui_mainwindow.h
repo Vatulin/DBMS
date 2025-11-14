@@ -30,6 +30,7 @@ public:
     QWidget *centralwidget;
     QPushButton *reload;
     QTableView *tableView;
+    QPushButton *add;
     QMenuBar *menubar;
     QMenu *menu;
     QStatusBar *statusbar;
@@ -49,6 +50,9 @@ public:
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QString::fromUtf8("tableView"));
         tableView->setGeometry(QRect(230, 10, 531, 521));
+        add = new QPushButton(centralwidget);
+        add->setObjectName(QString::fromUtf8("add"));
+        add->setGeometry(QRect(10, 90, 121, 71));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -73,6 +77,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         action->setText(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217 \320\272 \320\221\320\224...", nullptr));
         reload->setText(QApplication::translate("MainWindow", "\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214", nullptr));
+        add->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214...", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 

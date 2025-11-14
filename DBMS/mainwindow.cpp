@@ -20,3 +20,12 @@ void MainWindow::on_action_triggered()
     dlg->show();
 }
 
+
+void MainWindow::on_reload_clicked()
+{
+    tmodel = new QSqlTableModel();
+    tmodel->setTable("product");
+    tmodel->select();
+    ui->tableView->setModel(tmodel);
+}
+

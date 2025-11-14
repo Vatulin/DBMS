@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "connectiondialog.h"
 #include "ui_connectiondialog.h"
+#include <QSqlTableModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,8 +21,11 @@ public:
 private slots:
     void on_action_triggered();
 
+    void on_reload_clicked();
+
 private:
     Ui::MainWindow *ui;
     ConnectionDialog *dlg;
+    QSqlTableModel *tmodel;
 };
 #endif // MAINWINDOW_H

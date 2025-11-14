@@ -16,12 +16,14 @@ class ConnectionDialog : public QWidget
 public:
     explicit ConnectionDialog(QWidget *parent = nullptr);
     ~ConnectionDialog();
+    QMessageBox*msg;
 
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::ConnectionDialog *ui;
+    QSqlDatabase db;
 };
 
 #endif // CONNECTIONDIALOG_H

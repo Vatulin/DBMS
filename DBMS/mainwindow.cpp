@@ -23,9 +23,8 @@ void MainWindow::on_action_triggered()
 
 void MainWindow::on_reload_clicked()
 {
-    tmodel = new QSqlTableModel();
-    tmodel->setTable("product");
-    tmodel->select();
-    ui->tableView->setModel(tmodel);
+    qmodel = new QSqlTableModel();
+     qmodel->setQuery("SELECT * FROM product");
+     ui->tableView->setModel(qmodel);
 }
 

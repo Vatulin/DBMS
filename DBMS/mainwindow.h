@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "connectiondialog.h"
 #include "ui_connectiondialog.h"
-#include <QSqlTableModel>
+#include <QSqlQueryModel>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +26,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     ConnectionDialog *dlg;
-    QSqlTableModel *tmodel;
+    QSqlQueryModel *qmodel;
 };
 #endif // MAINWINDOW_H

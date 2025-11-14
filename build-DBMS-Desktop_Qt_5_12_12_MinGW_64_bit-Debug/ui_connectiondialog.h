@@ -79,7 +79,11 @@ public:
     {
         ConnectionDialog->setWindowTitle(QApplication::translate("ConnectionDialog", "Form", nullptr));
         server_address_label->setText(QApplication::translate("ConnectionDialog", "\320\220\320\264\321\200\320\265\321\201 \321\201\320\265\321\200\320\262\320\265\321\200\320\260", nullptr));
+        lineEdit->setText(QApplication::translate("ConnectionDialog", "DESKTOP-UBG39OS\\SQLEXPRESS", nullptr));
+        lineEdit->setPlaceholderText(QString());
         BD_Name->setText(QApplication::translate("ConnectionDialog", "<html><head/><body><p>\320\230\320\274\321\217 \320\261\320\260\320\267\321\213 \320\264\320\260\320\275\320\275\321\213\321\205</p></body></html>", nullptr));
+        lineEdit_2->setText(QApplication::translate("ConnectionDialog", "qtcourse", nullptr));
+        lineEdit_2->setPlaceholderText(QString());
         Login->setText(QApplication::translate("ConnectionDialog", "\320\233\320\276\320\263\320\270\320\275", nullptr));
         Login_2->setText(QApplication::translate("ConnectionDialog", "\320\237\320\260\321\200\320\276\320\273\321\214", nullptr));
         pushButton->setText(QApplication::translate("ConnectionDialog", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217", nullptr));

@@ -40,6 +40,12 @@
      <height>22</height>
     </rect>
    </property>
+   <property name="text">
+    <string>DESKTOP-UBG39OS\SQLEXPRESS</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
   </widget>
   <widget class="QLabel" name="BD_Name">
    <property name="geometry">
@@ -67,6 +73,12 @@
      <width>331</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="text">
+    <string>qtcourse</string>
+   </property>
+   <property name="placeholderText">
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="Login">

@@ -2,6 +2,11 @@
 #define PRINTDIALOG_H
 
 #include <QWidget>
+#include <QSqlQuery>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
+#include <QAxObject>
 
 namespace Ui {
 class PrintDialog;

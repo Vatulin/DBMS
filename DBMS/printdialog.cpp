@@ -1,10 +1,6 @@
 #include "printdialog.h"
 #include "ui_printdialog.h"
 #include <QDialog>
-#include <QSqlQuery>
-#include <QFileDialog>
-#include <QFile>
-#include <QTextStream>
 
 PrintDialog::PrintDialog(QWidget *parent) :
     QWidget(parent),
@@ -55,6 +51,13 @@ void PrintDialog::on_make_clicked()
         in << "</center></body></html>";
 
         file->close();
+
+        QAxObject *word = new QAxObject("Word.Application",this);
+        word->setProperty("DisplayAlerts",false);
+        word->setProperty("Visible", true);
+        QAxObject *doc = word->querySubObject("Documents");
+        doc->dynamicCall("Open(QVariant)", "C:\\Docs\\test.html");
+
         close();
 }
 

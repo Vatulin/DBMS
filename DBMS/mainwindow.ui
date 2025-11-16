@@ -33,7 +33,7 @@
       <x>230</x>
       <y>10</y>
       <width>551</width>
-      <height>491</height>
+      <height>451</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
@@ -176,13 +176,26 @@
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>510</y>
+      <y>470</y>
       <width>551</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
      <string>Экспорт в Word</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="export_3">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>510</y>
+      <width>551</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Экспорт в PDF</string>
     </property>
    </widget>
   </widget>

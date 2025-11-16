@@ -10,6 +10,9 @@
 #include "ui_modfydialog.h"
 #include "printdialog.h"
 #include "ui_printdialog.h"
+#include <QPrinter>
+#include <QTextDocument>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -46,6 +49,8 @@ private slots:
     void ModRecAction();
 
     void on_export_2_clicked();
+
+    void on_export_3_clicked();
 
 signals:
     void sendID(int);

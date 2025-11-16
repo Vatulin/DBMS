@@ -251,6 +251,7 @@ Makefile: ../DBMS/DBMS.pro ../../Qt/Qt5.12.12/5.12.12/mingw73_64/mkspecs/win32-g
 		../DBMS/DBMS.pro \
 		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5AxContainer.prl \
 		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5AxBase.prl \
+		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5PrintSupport.prl \
 		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Widgets.prl \
 		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Gui.prl \
 		../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Sql.prl \
@@ -445,6 +446,7 @@ Makefile: ../DBMS/DBMS.pro ../../Qt/Qt5.12.12/5.12.12/mingw73_64/mkspecs/win32-g
 ../DBMS/DBMS.pro:
 ../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5AxContainer.prl:
 ../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5AxBase.prl:
+../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5PrintSupport.prl:
 ../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Widgets.prl:
 ../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Gui.prl:
 ../../Qt/Qt5.12.12/5.12.12/mingw73_64/lib/Qt5Sql.prl:

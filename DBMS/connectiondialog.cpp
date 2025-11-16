@@ -36,6 +36,7 @@ void ConnectionDialog::on_pushButton_clicked()
 
       }
      msg->show();
+     close();
 
 }
 

@@ -136,3 +136,10 @@ void MainWindow::ModRecAction()
     SLOT(sendingID(int)));
 }
 
+
+void MainWindow::on_export_2_clicked()
+{
+    pdlg = new PrintDialog();
+    pdlg->show();
+}
+

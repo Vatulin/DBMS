@@ -41,6 +41,7 @@ public:
     QLineEdit *lineEdit_3;
     QPushButton *change;
     QPushButton *delete_2;
+    QPushButton *export_2;
     QMenuBar *menubar;
     QMenu *menu;
     QStatusBar *statusbar;
@@ -59,7 +60,7 @@ public:
         reload->setGeometry(QRect(10, 10, 101, 31));
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(230, 10, 551, 521));
+        tableView->setGeometry(QRect(230, 10, 551, 491));
         tableView->setContextMenuPolicy(Qt::CustomContextMenu);
         tableView->setSelectionMode(QAbstractItemView::SingleSelection);
         tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -96,6 +97,9 @@ public:
         delete_2 = new QPushButton(centralwidget);
         delete_2->setObjectName(QString::fromUtf8("delete_2"));
         delete_2->setGeometry(QRect(10, 290, 201, 28));
+        export_2 = new QPushButton(centralwidget);
+        export_2->setObjectName(QString::fromUtf8("export_2"));
+        export_2->setGeometry(QRect(230, 510, 551, 28));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -126,6 +130,7 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "\320\232\320\260\321\202\320\265\320\263\320\276\321\200\320\270\321\217", nullptr));
         change->setText(QApplication::translate("MainWindow", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
         delete_2->setText(QApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
+        export_2->setText(QApplication::translate("MainWindow", "\320\255\320\272\321\201\320\277\320\276\321\200\321\202 \320\262 Word", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 

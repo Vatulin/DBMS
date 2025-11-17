@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -47,6 +48,7 @@ public:
     QPushButton *export_3;
     QLabel *label_4;
     QToolButton *toolButton;
+    QComboBox *comboBox;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -114,11 +116,14 @@ public:
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(10, 180, 201, 61));
-        label_4->setFrameShape(QFrame::Box);
+        label_4->setFrameShape(QFrame::StyledPanel);
         label_4->setFrameShadow(QFrame::Plain);
         toolButton = new QToolButton(centralwidget);
         toolButton->setObjectName(QString::fromUtf8("toolButton"));
         toolButton->setGeometry(QRect(10, 250, 27, 22));
+        comboBox = new QComboBox(centralwidget);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(10, 300, 201, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));

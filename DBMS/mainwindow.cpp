@@ -50,7 +50,7 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
     temp_ID = ui->tableView->model()->data(ui->tableView->
     model()->index(index.row(),0)).toInt(); //в одну строку
         QSqlQuery *query = new QSqlQuery();
-        query->prepare("SELECT name, cat_ID FROM product WHERE ID = :ID");
+        query->prepare("SELECT name, cat_ID, ImagePath FROM product WHERE ID = :ID");
         query->bindValue(":ID",temp_ID);
 
         ui->lineEdit->setText(QString::number(temp_ID));
@@ -59,6 +59,8 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
             query->next();
             ui->lineEdit_2->setText(query->value(0).toString());
             ui->lineEdit_3->setText(query->value(1).toString());
+            Img = query->value(2).toString();
+            ui->label_4->setPixmap(Img);
         }
 }
 
@@ -82,14 +84,18 @@ void MainWindow::on_change_clicked()
 {
     QSqlQuery *query = new QSqlQuery();
        query->prepare("UPDATE product SET name = :name, "
-                      "cat_ID = :cat_ID WHERE ID = :ID");
+                      "cat_ID = :cat_ID, "
+                      "ImagePath = :image WHERE ID = :ID");
        query->bindValue(":ID",ui->lineEdit->text());
        query->bindValue(":name",ui->lineEdit_2->text());
        query->bindValue(":cat_ID",ui->lineEdit_3->text());
+       query->bindValue(":image",Img);
        query->exec();
+
        ui->lineEdit->setText("");
        ui->lineEdit_2->setText("");
        ui->lineEdit_3->setText("");
+       ui->label_4->setText("");
        MainWindow::on_reload_clicked();
 }
 

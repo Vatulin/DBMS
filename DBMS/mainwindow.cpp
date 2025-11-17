@@ -178,3 +178,10 @@ void MainWindow::on_export_3_clicked()
         doc.print(&printer);
 }
 
+
+void MainWindow::on_toolButton_clicked()
+{
+    Img = QFileDialog::getOpenFileName(0, "Открыть файл", Img,"*.jpg");
+    ui->label_4->setPixmap(Img);
+}
+

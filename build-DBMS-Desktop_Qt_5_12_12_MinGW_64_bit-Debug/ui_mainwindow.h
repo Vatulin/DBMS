@@ -21,6 +21,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -43,6 +44,8 @@ public:
     QPushButton *delete_2;
     QPushButton *export_2;
     QPushButton *export_3;
+    QLabel *label_4;
+    QToolButton *toolButton;
     QMenuBar *menubar;
     QMenu *menu;
     QStatusBar *statusbar;
@@ -87,23 +90,31 @@ public:
         lineEdit_2->setGeometry(QRect(10, 140, 201, 22));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(10, 190, 201, 16));
+        label_3->setGeometry(QRect(10, 280, 201, 16));
         label_3->setFont(font);
         lineEdit_3 = new QLineEdit(centralwidget);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setGeometry(QRect(10, 210, 201, 22));
+        lineEdit_3->setGeometry(QRect(10, 300, 201, 22));
         change = new QPushButton(centralwidget);
         change->setObjectName(QString::fromUtf8("change"));
-        change->setGeometry(QRect(10, 250, 201, 28));
+        change->setGeometry(QRect(10, 340, 201, 28));
         delete_2 = new QPushButton(centralwidget);
         delete_2->setObjectName(QString::fromUtf8("delete_2"));
-        delete_2->setGeometry(QRect(10, 290, 201, 28));
+        delete_2->setGeometry(QRect(10, 380, 201, 28));
         export_2 = new QPushButton(centralwidget);
         export_2->setObjectName(QString::fromUtf8("export_2"));
         export_2->setGeometry(QRect(230, 470, 551, 28));
         export_3 = new QPushButton(centralwidget);
         export_3->setObjectName(QString::fromUtf8("export_3"));
         export_3->setGeometry(QRect(230, 510, 551, 28));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(10, 180, 201, 61));
+        label_4->setFrameShape(QFrame::Box);
+        label_4->setFrameShadow(QFrame::Plain);
+        toolButton = new QToolButton(centralwidget);
+        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+        toolButton->setGeometry(QRect(10, 250, 27, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -136,6 +147,8 @@ public:
         delete_2->setText(QApplication::translate("MainWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         export_2->setText(QApplication::translate("MainWindow", "\320\255\320\272\321\201\320\277\320\276\321\200\321\202 \320\262 Word", nullptr));
         export_3->setText(QApplication::translate("MainWindow", "\320\255\320\272\321\201\320\277\320\276\321\200\321\202 \320\262 PDF", nullptr));
+        label_4->setText(QString());
+        toolButton->setText(QApplication::translate("MainWindow", "...", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi
 

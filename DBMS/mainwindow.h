@@ -13,6 +13,7 @@
 #include <QPrinter>
 #include <QTextDocument>
 #include <QFileDialog>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -52,6 +53,8 @@ private slots:
 
     void on_export_3_clicked();
 
+    void on_toolButton_clicked();
+
 signals:
     void sendID(int);
 
@@ -62,5 +65,6 @@ private:
     AddDialog *adlg;
     ModfyDialog *mdlg;
     PrintDialog *pdlg;
+    QString Img;
 };
 #endif // MAINWINDOW_H

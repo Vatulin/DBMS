@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[17];
-    char stringdata0[251];
+    QByteArrayData data[18];
+    char stringdata0[273];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -47,7 +47,8 @@ QT_MOC_LITERAL(12, 163, 12), // "DelRecAction"
 QT_MOC_LITERAL(13, 176, 12), // "ModRecAction"
 QT_MOC_LITERAL(14, 189, 19), // "on_export_2_clicked"
 QT_MOC_LITERAL(15, 209, 19), // "on_export_3_clicked"
-QT_MOC_LITERAL(16, 229, 21) // "on_toolButton_clicked"
+QT_MOC_LITERAL(16, 229, 21), // "on_toolButton_clicked"
+QT_MOC_LITERAL(17, 251, 21) // "on_action_2_triggered"
 
     },
     "MainWindow\0sendID\0\0on_action_triggered\0"
@@ -56,7 +57,7 @@ QT_MOC_LITERAL(16, 229, 21) // "on_toolButton_clicked"
     "on_delete_2_clicked\0on_change_clicked\0"
     "CustomMenuReq\0DelRecAction\0ModRecAction\0"
     "on_export_2_clicked\0on_export_3_clicked\0"
-    "on_toolButton_clicked"
+    "on_toolButton_clicked\0on_action_2_triggered"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +67,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      13,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -74,21 +75,22 @@ static const uint qt_meta_data_MainWindow[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   79,    2, 0x06 /* Public */,
+       1,    1,   84,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   82,    2, 0x08 /* Private */,
-       4,    0,   83,    2, 0x08 /* Private */,
-       5,    0,   84,    2, 0x08 /* Private */,
-       6,    1,   85,    2, 0x08 /* Private */,
-       9,    0,   88,    2, 0x08 /* Private */,
-      10,    0,   89,    2, 0x08 /* Private */,
-      11,    1,   90,    2, 0x08 /* Private */,
-      12,    0,   93,    2, 0x08 /* Private */,
-      13,    0,   94,    2, 0x08 /* Private */,
-      14,    0,   95,    2, 0x08 /* Private */,
-      15,    0,   96,    2, 0x08 /* Private */,
-      16,    0,   97,    2, 0x08 /* Private */,
+       3,    0,   87,    2, 0x08 /* Private */,
+       4,    0,   88,    2, 0x08 /* Private */,
+       5,    0,   89,    2, 0x08 /* Private */,
+       6,    1,   90,    2, 0x08 /* Private */,
+       9,    0,   93,    2, 0x08 /* Private */,
+      10,    0,   94,    2, 0x08 /* Private */,
+      11,    1,   95,    2, 0x08 /* Private */,
+      12,    0,   98,    2, 0x08 /* Private */,
+      13,    0,   99,    2, 0x08 /* Private */,
+      14,    0,  100,    2, 0x08 /* Private */,
+      15,    0,  101,    2, 0x08 /* Private */,
+      16,    0,  102,    2, 0x08 /* Private */,
+      17,    0,  103,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    2,
@@ -101,6 +103,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QPoint,    2,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -129,6 +132,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->on_export_2_clicked(); break;
         case 11: _t->on_export_3_clicked(); break;
         case 12: _t->on_toolButton_clicked(); break;
+        case 13: _t->on_action_2_triggered(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -172,13 +176,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 13)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 13;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 13)
+        if (_id < 14)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 13;
+        _id -= 14;
     }
     return _id;
 }

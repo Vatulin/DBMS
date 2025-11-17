@@ -191,3 +191,10 @@ void MainWindow::on_toolButton_clicked()
     ui->label_4->setPixmap(Img);
 }
 
+
+void MainWindow::on_action_2_triggered()
+{
+    pg = new printGraf();
+    pg->show();
+}
+

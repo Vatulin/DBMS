@@ -15,21 +15,26 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     modfydialog.cpp \
-    printdialog.cpp
+    printdialog.cpp \
+    printgraf.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     adddialog.h \
     connectiondialog.h \
     mainwindow.h \
     modfydialog.h \
-    printdialog.h
+    printdialog.h \
+    printgraf.h \
+    qcustomplot.h
 
 FORMS += \
     adddialog.ui \
     connectiondialog.ui \
     mainwindow.ui \
     modfydialog.ui \
-    printdialog.ui
+    printdialog.ui \
+    printgraf.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -30,6 +30,7 @@ class Ui_MainWindow
 {
 public:
     QAction *action;
+    QAction *action_2;
     QWidget *centralwidget;
     QPushButton *reload;
     QTableView *tableView;
@@ -48,6 +49,7 @@ public:
     QToolButton *toolButton;
     QMenuBar *menubar;
     QMenu *menu;
+    QMenu *menu_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -57,6 +59,8 @@ public:
         MainWindow->resize(800, 600);
         action = new QAction(MainWindow);
         action->setObjectName(QString::fromUtf8("action"));
+        action_2 = new QAction(MainWindow);
+        action_2->setObjectName(QString::fromUtf8("action_2"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         reload = new QPushButton(centralwidget);
@@ -121,13 +125,17 @@ public:
         menubar->setGeometry(QRect(0, 0, 800, 26));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
+        menu_2 = new QMenu(menubar);
+        menu_2->setObjectName(QString::fromUtf8("menu_2"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menu->menuAction());
+        menubar->addAction(menu_2->menuAction());
         menu->addAction(action);
+        menu_2->addAction(action_2);
 
         retranslateUi(MainWindow);
 
@@ -138,6 +146,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         action->setText(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\270\321\202\321\214\321\201\321\217 \320\272 \320\221\320\224...", nullptr));
+        action_2->setText(QApplication::translate("MainWindow", "\320\223\321\200\320\260\321\204\320\270\321\207\320\265\321\201\320\272\320\270\320\271 \320\276\321\202\321\207\321\221\321\202...", nullptr));
         reload->setText(QApplication::translate("MainWindow", "\320\236\320\261\320\275\320\276\320\262\320\270\321\202\321\214", nullptr));
         add->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214...", nullptr));
         label->setText(QApplication::translate("MainWindow", "ID", nullptr));
@@ -150,6 +159,7 @@ public:
         label_4->setText(QString());
         toolButton->setText(QApplication::translate("MainWindow", "...", nullptr));
         menu->setTitle(QApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
+        menu_2->setTitle(QApplication::translate("MainWindow", "\320\236\321\202\321\207\321\221\321\202", nullptr));
     } // retranslateUi
 
 };

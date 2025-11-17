@@ -4,8 +4,12 @@ release/main.o
 release/mainwindow.o
 release/modfydialog.o
 release/printdialog.o
+release/printgraf.o
+release/qcustomplot.o
 release/moc_adddialog.o
 release/moc_connectiondialog.o
 release/moc_mainwindow.o
 release/moc_modfydialog.o
 release/moc_printdialog.o
+release/moc_printgraf.o
+release/moc_qcustomplot.o
